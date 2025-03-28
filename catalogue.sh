@@ -19,5 +19,5 @@ systemctl daemon-reload
 systemctl  enable catalogue
 systemctl restart catalogue
 cp /home/centos/devops-practice/mongod.repo  /etc/yum.repos.d/mongod.repo
-yum install mongodb-org-shell -y
+dnf install mongodb-org-shell -y
 mongo --host <ip address> </app/schema/catalogue.js
