@@ -13,13 +13,13 @@ echo -e "\e[36m<<<<<<<pukku>>>>>>> \e [0m"
 unzip /tmp/catalogue.zip
 npm install
 echo -e "\e[36m<<<<<<<naukku>>>>>>> \e [0m"
-cp /home/centos/devops-practice/catalogue.service /etc/systemd/system/catalogue.service
+cp /root/devops-practice/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[36m<<<<<<<boukku>>>>>>> \e [0m"
 systemctl daemon-reload
 systemctl  enable catalogue
 systemctl restart catalogue
 echo -e "\e[36m<<<<<<<<<lanja>>>>>>>> \e[0m"
-cp /home/centos/devops-practice/mongod.repo  /etc/yum.repos.d/mongod.repo
+cp /root/devops-practice/mongod.repo  /etc/yum.repos.d/mongod.repo
 echo -e "\e[36m<<<<<<<<<lanja>>>>>>>> \e[0m"
 dnf install mongodb-org-shell -y
 mongo --host ip address </app/schema/catalogue.js
